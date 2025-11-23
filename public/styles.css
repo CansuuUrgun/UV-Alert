@@ -1,0 +1,107 @@
+:root{
+    --alert-color: #DD0303;
+    --low-alert-color: #F16767;
+    --medium-color: #FF9B17;
+    --low-color: #FCB454;
+    --pr-text-color: #FAB12F;
+    --title-color: #FA4032; 
+}
+html{
+    height: 100%;
+}
+body{
+    background: linear-gradient(135deg, #FFF0D1, #FFCF9E);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--pr-text-color);
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.center{
+    text-align: center;
+}
+.container{
+    flex: 1;
+}
+.wrapper {
+    /* text-align: center; */
+    min-height: 100%;
+    display: flex;
+    flex-direction: column; /* içerik üstte, footer altta */
+}
+p{
+    color: #183B4E;
+}
+
+.customCard{
+    padding-top: 7px;
+}
+.feature{
+    text-align: center;
+}
+.strong{
+    color: var(--pr-text-color);
+}
+.title-border{
+    border-bottom: 3px solid var(--pr-text-color);
+}
+.title{
+     font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.text-body-emphasis{
+    color: var(--pr-text-color) !important;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.lowUv{
+    color: var(--low-color);
+}
+
+.moderateUv{
+    color: var(--medium-color);
+}
+
+.highUv, .veryHighUv{
+    color: var(--low-alert-color)
+}
+
+.extreme{
+    color: var(--alert-color);
+}
+img{
+    width: 5rem;
+    height: 5rem;
+}
+.alert{
+    display: inline-block;
+    text-align: center;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); opacity: 1; }
+  50%  { transform: scale(1.12); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+footer{
+    padding: 1rem;
+    text-align: center;
+}
+a{
+  text-decoration: none;
+  color: #FEF2BF;
+  color: var(--pr-text-color);
+  font-weight: bold;
+}
+.feature:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 110, 0, 0.35);
+    border-radius: 10px;
+}

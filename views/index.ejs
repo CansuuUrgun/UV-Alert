@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UV Monitor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container px-4 py-5" id="featured-3"> 
+            <h1 class="pb-1 title-border title">Today’s Sun Schedule</h1> 
+            <div class="row py-5 row-cols-1 row-cols-lg-3"> 
+                <div class="feature col customCard"> 
+                    <div class=" align-items-center justify-content-center mb-3 "> 
+                        <img src="/images/sunrise.png" alt="sunrise icon"/>
+                    </div> 
+                    <h3 class="fs-2 text-body-emphasis">Sunrise</h3>
+                    <% if(locals.sunRiseS && locals.sunRiseE) { %>
+                    <p>
+                        <strong class="strong">Sunrise Start: </strong><%=sunRiseS %> <br>
+                        <strong class="strong">Sunrise End: </strong><%= sunRiseE %>
+                    </p>
+                    <% } else { %>
+                    <p>Can not load.</p>
+                    <% } %> 
+                </div> 
+                <div class="feature col customCard"> 
+                    <div class=" align-items-center justify-content-center mb-3 "> 
+                        <img src="/images/sun.png" alt="sunrise icon"/>
+                    </div> 
+                    <h3 class="fs-2 text-body-emphasis">Solar Noon</h3> 
+                    <% if(locals.solarNoonD) { %>
+                    <p><strong class="strong"><%= solarNoonD %></strong></p>
+                    <% } else { %>
+                    <p>Can not load.</p>
+                    <% } %>         
+                </div> 
+                <div class="feature col customCard"> 
+                    <div class=" align-items-center justify-content-center mb-3 "> 
+                        <img src="/images/sunset.png" alt="sunrise icon"/>
+                    </div> 
+                    <h3 class="fs-2 text-body-emphasis">Sunset</h3> 
+                    <% if(locals.sunSetS && locals.sunSetE) { %>
+                    <p>
+                        <strong class="strong">Sunset Start: </strong><%=sunSetS %> <br>
+                        <strong class="strong">Sunset End: </strong><%= sunSetE %>
+                    </p>
+                    <% } else { %>
+                    <p>Can not load.</p>
+                    <% } %>         
+                </div> 
+            </div>
+            <div class="center">
+                <% if (uv != null) { %>
+                <% if (uv < 3) { %>
+                <h2 class="lowUv">UV is low right now, sunscreen is not necessary.</h2>
+                <% } else if (uv < 6) { %>
+                <h2 class="moderateUv">UV is moderate, applying sunscreen is recommended.</h2>
+                <% } else if (uv < 8) { %>
+                <h2 class="highUv alert">UV is <strong>high!</strong> Apply sunscreen and avoid direct sun exposure between 11:00–16:00.</h2>
+                <% } else if (uv < 11) { %>
+                <h2 class="veryHighUv alert">UV is <strong>very high!</strong> Stay in the shade, reapply sunscreen, and avoid going out between 11:00–17:00.</h2>
+                <% } else { %>
+                <h2 class="extreme alert">UV is <strong>extreme!</strong> Avoid going outside if possible.</h2>
+                <% } %>
+                <% } else{ %>
+                <h2>Can not load uv</h2>
+                <%} %>
+            </div>
+        </div>
+        <footer>
+            <a href="https://www.linkedin.com/in/cansu-urgun/">Made with ❤️ by Cansu Urgun</a>
+        </footer>
+    </div>
+</body>
+</html>
