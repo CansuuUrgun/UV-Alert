@@ -21,7 +21,7 @@ The backend is built with Node.js + Express, while the frontend uses EJS, Bootst
 - Easy deployment on Render
 
   ## 📌 Demo
-[UV Alert](https://cansuuurgun.github.io/Simon-Game/)
+[UV Alert](https://uv-alert.onrender.com/)
 
 ## 📝 Author
 Developed by **Cansu Urgun**  
