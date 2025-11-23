@@ -22,6 +22,8 @@ The backend is built with Node.js + Express, while the frontend uses EJS, Bootst
 
   ## 📌 Demo
 [UV Alert](https://uv-alert.onrender.com/)
+![UVMonitor-GoogleChrome2025-11-2307-56-16-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/a1847a01-6072-4831-a9a7-a5e4a591b3f8)
+
 
 ## 📝 Author
 Developed by **Cansu Urgun**  
