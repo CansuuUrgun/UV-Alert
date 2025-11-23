@@ -1,5 +1,5 @@
 # UV-Alert 🌤️
-This is a **UV Alert** developed as part of the Udemy course **"The Complete Full-Stack Web Development Bootcamp"**. A clean, modern web application that displays daily UV index, sunrise, solar noon, sunset, and other solar data.
+This is a **UV Alert** developed as part of the Udemy course **"The Complete Full-Stack Web Development Bootcamp"**. A clean, modern web application that displays daily UV index, sunrise, solar noon, sunset, and other solar data. <br>
 The backend is built with Node.js + Express, while the frontend uses EJS, Bootstrap 5, and custom CSS effects. API data is fetched using Axios and rendered dynamically through EJS templates.
 
 ## 💻 Technologies Used
